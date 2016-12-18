@@ -54,14 +54,21 @@ public class ArticleParser {
         }
 
         String content = articleData.getString("content");
-        String author = articleData.getString("author");
-        DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssz");
-        Date publishedDate = new Date();
+        String author = null;
 
-        try {
-            publishedDate = format.parse(articleData.getString("date_published"));
-        } catch (ParseException e) {
-            e.printStackTrace();
+        if (!articleData.isNull("author")) {
+            author = articleData.getString("author");
+        }
+
+        DateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        Date publishedDate = null;
+
+        if (!articleData.isNull("date_published")) {
+            try {
+                publishedDate = format.parse(articleData.getString("date_published"));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
         }
 
         return new Article(articleURL, title, imageURL, content, author, publishedDate, language);
