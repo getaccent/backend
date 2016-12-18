@@ -28,11 +28,15 @@ public class Keys {
         return keys;
     }
 
-    public static String bingSearchKey() {
+    public static String getBingSearchKey() {
         return keys().get("bing_search");
     }
 
-    public static String googleTranslateKey() {
+    public static String getGoogleTranslateKey() {
         return keys().get("google_translate");
+    }
+
+    public static String getMercuryKey() {
+        return keys().get("mercury");
     }
 }

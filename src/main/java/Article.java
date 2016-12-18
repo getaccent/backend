@@ -27,14 +27,14 @@ public class Article {
     public URL imageURL;
 
     /**
-     * The article's text in its original language.
+     * The article's content in its original language, in HTML format.
      */
-    public String text;
+    public String content;
 
     /**
-     * A list of the people who wrote the article.
+     * The name of the author of the article.
      */
-    public String[] authors;
+    public String author;
 
     /**
      * The date the article was published.
@@ -45,4 +45,14 @@ public class Article {
      * The language this article was originally written in.
      */
     public Language language;
+
+    public Article(URL url, String title, URL imageURL, String text, String author, Date publishedDate, Language language) {
+        this.url = url;
+        this.title = title;
+        this.imageURL = imageURL;
+        this.content = content;
+        this.author = author;
+        this.publishedDate = publishedDate;
+        this.language = language;
+    }
 }
