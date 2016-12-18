@@ -1,0 +1,2 @@
+bing_search=xxxxxxxx
+google_translate=xxxxxxxx
