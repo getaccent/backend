@@ -1,2 +1,2 @@
-bing_search=f23e6b9b2735435ab3f57262b79d6c6a
-google_translate=AIzaSyARW9JcFJBS92x2IR-6dSYAI_l0R55xCrA
+bing_search=xxxxxxxx
+google_translate=xxxxxxxx
