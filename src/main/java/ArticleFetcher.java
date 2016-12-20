@@ -20,7 +20,7 @@ public class ArticleFetcher {
         JSONObject articlesData;
 
         try {
-            URL url = new URL("https://api.cognitive.microsoft.com/bing/v5.0/news?mkt=" + language.getId());
+            URL url = new URL("https://api.cognitive.microsoft.com/bing/v5.0/news?mkt=" + language.getMarketCode());
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setRequestProperty("Ocp-Apim-Subscription-Key", Keys.getBingSearchKey());
@@ -28,7 +28,7 @@ public class ArticleFetcher {
             InputStreamReader streamReader = new InputStreamReader(connection.getInputStream());
             BufferedReader reader = new BufferedReader(streamReader);
 
-            StringBuffer response = new StringBuffer();
+            StringBuilder response = new StringBuilder();
             String line;
 
             while ((line = reader.readLine()) != null) {
@@ -48,6 +48,7 @@ public class ArticleFetcher {
         for (int i = 0; i < retrievedArticles.length(); i++) {
             JSONObject retrievedArticle = retrievedArticles.getJSONObject(i);
             String urlString = retrievedArticle.getString("url");
+            System.out.println(urlString);
 
             try {
                 URL url = new URL(urlString);
