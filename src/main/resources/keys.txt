@@ -1,3 +1,3 @@
-bing_search=xxxxxxxx
-google_translate=xxxxxxxx
-mercury=xxxxxxxx
+bing_search=a2db476d08a247ceba5e3d6cee121521
+google_translate=AIzaSyCsT0iL-j82U_BRUJE-L3uBLt3pvDuqITw
+mercury=CnEnt2CuwqYN4x0w3CEQs59n5kH6MnTUpCFHtekg
